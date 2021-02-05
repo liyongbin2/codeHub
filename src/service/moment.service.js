@@ -23,7 +23,7 @@ class MomentService {
 	        m.createAt createTime,
 	        m.updateAt updateTime,
 	        JSON_OBJECT( 'id', u.id, 'name', u.NAME, 'avatar', u.avatar_url ) author,# 子查询
-	        ( SELECT COUNT(*) FROM COMMENT c WHERE c.moment_id = m.id ) commentCount,# 子查询
+	        ( SELECT COUNT(*) FROM comment c WHERE c.moment_id = m.id ) commentCount,# 子查询
 	        (
 	        SELECT
 	        IF
