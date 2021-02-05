@@ -41,7 +41,7 @@ class MomentService {
 		        NULL 
 		        ) 
 	        FROM
-		      COMMENT c
+		      comment c
 		      LEFT JOIN users cu ON cu.id = c.user_id # 使条件和最终的传入的条件联系起来
         	WHERE
         		m.id = c.moment_id 
